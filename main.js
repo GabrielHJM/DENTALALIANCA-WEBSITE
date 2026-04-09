@@ -194,4 +194,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     console.log(`Dental Alianca Engine Active | Device: ${body.classList.contains('is-mobile') ? 'Mobile' : 'Desktop'} | Touch: ${isTouchDevice}`);
+
+    // Final Polish: Force video play for mobile after interaction or load
+    const cinematicVideo = document.querySelector('.cinematic-video');
+    if (cinematicVideo) {
+        cinematicVideo.play().catch(() => {
+            // Some mobile browsers need a user interaction to play
+            window.addEventListener('click', () => cinematicVideo.play(), { once: true });
+            window.addEventListener('touchstart', () => cinematicVideo.play(), { once: true });
+        });
+    }
 });
