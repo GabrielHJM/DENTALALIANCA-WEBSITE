@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         console.log(`Platform Context Updated: ${width}px | Mobile: ${body.classList.contains('is-mobile')}`);
+        
+        // Update global-ish state for other functions
+        window.isMobileState = body.classList.contains('is-mobile');
     };
 
     window.addEventListener('resize', updatePlatformState);
@@ -107,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Show/Hide header on scroll (Mobile Optimization)
-        if (isMobile && currentScroll > 500) {
+        if (body.classList.contains('is-mobile') && currentScroll > 500) {
             if (currentScroll > lastScroll) {
                 header.style.transform = 'translateY(-100%)';
             } else {
@@ -116,6 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         lastScroll = currentScroll;
+
+        // Reading Progress Logic
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (currentScroll / totalHeight);
+        const scrollProgress = document.getElementById('scroll-progress');
+        if (scrollProgress) {
+            scrollProgress.style.transform = `scaleX(${progress})`;
+        }
     }, { passive: true });
 
     // 5. Smooth Contextual Scrolling
@@ -151,5 +162,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { passive: true });
 
-    console.log(`Dental Alianca Engine Active | Device: ${isMobile ? 'Mobile' : 'Desktop'} | Touch: ${isTouchDevice}`);
+    // 8. Category Parallax Engine
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            if (body.classList.contains('is-mobile') || isTouchDevice) return;
+            
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Subtle rotation (max 10deg)
+            const rotateX = (y - centerY) / 15;
+            const rotateY = (centerX - x) / 15;
+            
+            card.style.transform = `translateY(-12px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            card.style.boxShadow = `${(centerX - x) / 5}px ${(centerY - y) / 5}px 30px rgba(10, 26, 58, 0.15)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `translateY(0) rotateX(0) rotateY(0) scale(1)`;
+            card.style.boxShadow = 'none';
+        });
+    });
+
+    console.log(`Dental Alianca Engine Active | Device: ${body.classList.contains('is-mobile') ? 'Mobile' : 'Desktop'} | Touch: ${isTouchDevice}`);
 });
