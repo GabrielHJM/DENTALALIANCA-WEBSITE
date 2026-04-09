@@ -137,11 +137,12 @@ header {
 .nav-container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 clamp(1rem, 3vw, 2.5rem);
+    padding: 0 clamp(0.5rem, 2vw, 2.5rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    gap: 10px;
 }
 
 .logo {
@@ -191,7 +192,7 @@ header {
 }
 
 @media (max-width: 768px) {
-    .nav-links { display: none; }
+    /* .nav-links visibility is handled by right: -100% in the mobile menu logic */
 }
 
 .nav-links a {
@@ -1035,10 +1036,17 @@ body.is-mobile .hero-btns {
     width: 100%;
 }
 
-body.is-mobile .btn-primary, 
-body.is-mobile .btn-secondary {
-    width: 100%;
-    justify-content: center;
+body.is-mobile .btn-cta-nav {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+}
+
+body.is-mobile .logo img {
+    height: 48px;
+}
+
+body.is-mobile .nav-container {
+    padding: 0 12px;
 }
 
 body.is-mobile .bento-grid {

@@ -110,9 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Show/Hide header on scroll (Mobile Optimization)
-        if (body.classList.contains('is-mobile') && currentScroll > 500) {
-            if (currentScroll > lastScroll) {
-                header.style.setProperty('--header-y', '-120%');
+        if (body.classList.contains('is-mobile')) {
+            if (currentScroll > 500) {
+                if (currentScroll > lastScroll) {
+                    header.style.setProperty('--header-y', '-120%');
+                } else {
+                    header.style.setProperty('--header-y', '0');
+                }
             } else {
                 header.style.setProperty('--header-y', '0');
             }
