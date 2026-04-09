@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & Professional Presence -->
-    <title>Dental Aliança - Excelência em Produtos Odontológicos em Dourados</title>
+    <title>Dental Aliança Produtos Odontológicos</title>
+    <link rel="icon" type="image/png" href="assets/logo-premium.png">
     <meta name="description" content="A Dental Aliança é referência em Dourados e região para produtos odontológicos. Qualidade, marcas líderes e atendimento especializado em um só lugar.">
     <meta name="keywords" content="dental, dourados, odontologia, produtos odontológicos, implantes, ortodontia, dental aliança">
     <meta name="author" content="Dental Aliança Engineering">
@@ -67,7 +68,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="loading">
     <!-- Premium Preloader -->
@@ -83,15 +84,21 @@
     <header id="header">
         <nav class="nav-container">
             <div class="logo">
-                <img src="assets/logo-main.png" alt="Dental Aliança Logo">
+                <img src="assets/logo-premium.png" alt="Dental Aliança Logo">
             </div>
             <ul class="nav-links">
-                <li><a href="#hero">Início</a></li>
+                <li><a href="#inicio">Início</a></li>
                 <li><a href="#marcas">Marcas</a></li>
                 <li><a href="#categorias">Produtos</a></li>
                 <li><a href="#sobre">Quem Somos</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li class="mobile-only"><a href="https://wa.me/5567992058241" class="btn-primary" target="_blank">WhatsApp Vendas</a></li>
             </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <a href="https://wa.me/5567992058241" class="btn-cta-nav" target="_blank">WhatsApp Vendas</a>
         </nav>
     </header>
@@ -102,64 +109,72 @@
                 <h1 class="reveal">Inovação e Qualidade para o seu <span class="text-gradient">Consultório</span>.</h1>
                 <p class="reveal">Fornecendo os melhores produtos odontológicos em Dourados e região com a excelência que sua clínica merece.</p>
                 <div class="hero-btns reveal">
-                    <a href="#contato" class="btn-primary">Fale com Consultor</a>
-                    <a href="#marcas" class="btn-secondary">Marcas que Trabalhamos <span>&gt;</span></a>
+                    <a href="#contato" class="btn-primary">Fale com um de nossos vendedores</a>
+                    <a href="#marcas" class="btn-secondary">Marcas que Trabalhamos</a>
                 </div>
             </div>
             <div class="hero-image reveal">
                 <div class="storefront-card">
-                    <img src="assets/fachada-noite.jpg" alt="Fachada Dental Aliança">
+                    <div class="img-gradient-overlay">
+                        <img src="assets/fachada-noite.jpg" alt="Fachada Dental Aliança">
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="marcas" class="brands-section">
             <div class="container">
-                <h2 class="section-title reveal">Parceiros de Confiança</h2>
-                <p class="section-subtitle reveal">Trabalhamos com as marcas líderes do mercado nacional e internacional.</p>
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Parcerias</span>
+                    <h2 class="section-title">Marcas de Confiança</h2>
+                    <p class="section-subtitle">Trabalhamos com as marcas líderes do mercado nacional e internacional.</p>
+                </div>
                 <div class="brands-grid">
-                    <div class="brand-item reveal"><h4>Microdont</h4></div>
-                    <div class="brand-item reveal"><h4>Newtec</h4></div>
-                    <div class="brand-item reveal"><h4>Orthometric</h4></div>
-                    <div class="brand-item reveal"><h4>FGM</h4></div>
-                    <div class="brand-item reveal"><h4>KG Sorensen</h4></div>
-                    <div class="brand-item reveal"><h4>Maquira</h4></div>
-                    <div class="brand-item reveal"><h4>SP Health</h4></div>
-                    <div class="brand-item reveal"><h4>Evoden</h4></div>
+                    <div class="brand-item reveal stagger-item"><h4>Microdont</h4></div>
+                    <div class="brand-item reveal stagger-item"><h4>Newtec</h4></div>
+                    <div class="brand-item reveal stagger-item"><h4>Orthometric</h4></div>
+                    <div class="brand-item reveal stagger-item"><h4>FGM</h4></div>
+                    <div class="brand-item reveal stagger-item"><h4>KG Sorensen</h4></div>
+                    <div class="brand-item reveal stagger-item"><h4>Maquira</h4></div>
+                    <div class="brand-item reveal stagger-item"><h4>SP Health</h4></div>
+                    <div class="brand-item reveal stagger-item"><h4>Evoden</h4></div>
                 </div>
             </div>
         </section>
 
         <section id="categorias" class="product-categories">
             <div class="container">
-                <h2 class="section-title reveal">O que distribuímos</h2>
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Portfólio</span>
+                    <h2 class="section-title">O que distribuímos</h2>
+                </div>
                 <div class="categories-grid">
-                    <div class="category-card reveal">
+                    <div class="category-card reveal stagger-item">
                         <div class="category-icon">🦷</div>
                         <h3>Ortodontia</h3>
                         <p>Brackets, arcos, elásticos e acessórios completos.</p>
                     </div>
-                    <div class="category-card reveal">
+                    <div class="category-card reveal stagger-item">
                         <div class="category-icon">💎</div>
                         <h3>Implantodontia</h3>
                         <p>Sistemas de implantes, componentes e instrumentais.</p>
                     </div>
-                    <div class="category-card reveal">
+                    <div class="category-card reveal stagger-item">
                         <div class="category-icon">✨</div>
                         <h3>Dentística</h3>
                         <p>Resinas, adesivos, clareadores e acabamento.</p>
                     </div>
-                    <div class="category-card reveal">
+                    <div class="category-card reveal stagger-item">
                         <div class="category-icon">🔬</div>
                         <h3>Endodontia</h3>
                         <p>Limas, cones de guta e soluções irrigadoras.</p>
                     </div>
-                    <div class="category-card reveal">
+                    <div class="category-card reveal stagger-item">
                         <div class="category-icon">🛡️</div>
                         <h3>Biossegurança</h3>
                         <p>EPIs, esterilização e descartáveis de alta qualidade.</p>
                     </div>
-                    <div class="category-card reveal">
+                    <div class="category-card reveal stagger-item">
                         <div class="category-icon">⚙️</div>
                         <h3>Equipamentos</h3>
                         <p>Periféricos e peças de mão de alta performance.</p>
@@ -168,32 +183,66 @@
             </div>
         </section>
 
-        <section id="sobre" class="about-section">
-            <div class="container">
-                <div class="about-flex">
-                    <div class="about-text reveal">
-                        <h2 class="section-title">Nossa História</h2>
-                        <p>A Dental Aliança foca objetivamente em atender com excelência e qualidade, visando a satisfação total de nossos clientes. Somos referência em Dourados para profissionais que não abrem mão de produtos certificados e suporte técnico diferenciado.</p>
+        <section id="sobre" class="experience-section section-dynamic-alt tight-top">
+            <div class="container cinematic-container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Trajetória</span>
+                    <h2 class="section-title">Nossa História</h2>
+                    <p class="section-subtitle">Conheça a Dental Aliança: Compromisso com a excelência em cada detalhe.</p>
+                </div>
+                
+                <!-- Vídeo Central -->
+                <div class="video-hero reveal">
+                    <div class="video-frame glass-premium">
+                        <video autoplay muted loop playsinline class="cinematic-video">
+                            <source src="assets/copy_550E0D5C-09C6-42DB-88F2-2E8347EBF1D4.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                        <div class="video-overlay"></div>
                     </div>
-                    <div class="about-image reveal">
-                        <img src="assets/fachada-dia-1.jpg" alt="Loja Dental Aliança">
+                </div>
+
+                <!-- Fotos da Loja -->
+                <div class="store-showcase reveal stagger-container">
+                    <div class="store-card glass-premium reveal stagger-item">
+                        <img src="assets/ESQUERDA.jpg" alt="Nossa Loja em Dourados - Vista Lateral">
+                    </div>
+                    <div class="store-card glass-premium reveal stagger-item">
+                        <img src="assets/CENTRAL.jpg" alt="Nossa Loja em Dourados - Vista Central">
+                    </div>
+                    <div class="store-card glass-premium reveal stagger-item">
+                        <img src="assets/fachada-noite.jpg" alt="Nossa Loja em Dourados - Noite">
+                    </div>
+                </div>
+
+                <!-- Missão, Visão e Valores -->
+                <div class="pillars-grid reveal stagger-container">
+                    <div class="pillar-card glass-premium reveal stagger-item">
+                        <div class="pillar-icon">🎯</div>
+                        <h3>Missão</h3>
+                        <p>Prover soluções odontológicas de alta performance com excelência no atendimento e velocidade na entrega.</p>
+                    </div>
+                    <div class="pillar-card glass-premium reveal stagger-item">
+                        <div class="pillar-icon">🔭</div>
+                        <h3>Visão</h3>
+                        <p>Ser o principal parceiro estratégico dos dentistas em Mato Grosso do Sul, reconhecido pela inovação e confiança.</p>
+                    </div>
+                    <div class="pillar-card glass-premium reveal stagger-item">
+                        <div class="pillar-icon">💎</div>
+                        <h3>Valores</h3>
+                        <p>Qualidade Inegociável, Ética Profissional, Inovação Constante e Compromisso com o Cliente.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contato" class="info-section">
-            <div class="info-grid">
-                <div class="info-card reveal">
-                    <div class="icon">📍</div>
-                    <h3>Localização</h3>
-                    <p>R. Toshinobu Katayama, 443 - B<br>Centro, Dourados - MS, 79806-030</p>
-                    <div class="map-container">
-                        <a href="https://www.google.com/maps/search/?api=1&query=R.+Toshinobu+Katayama,+443+-+B+-+Centro,+Dourados+-+MS" target="_blank" class="map-link">
-                            Abrir no Google Maps &rarr;
-                        </a>
-                    </div>
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow">Atendimento</span>
+                    <h2 class="section-title">Fale Conosco</h2>
                 </div>
+                <div class="info-grid">
                 <div class="info-card reveal">
                     <div class="icon">⏰</div>
                     <h3>Horários</h3>
@@ -203,11 +252,19 @@
                 <div class="info-card reveal">
                     <div class="icon">💬</div>
                     <h3>Fale Conosco</h3>
-                    <div class="contact-buttons">
+                    <div class="contact-buttons" style="display: grid; gap: 16px; margin-top: 20px;">
                         <a href="https://wa.me/5567992058241" target="_blank" class="btn-whatsapp">Vendas 1</a>
                         <a href="https://wa.me/5567993167875" target="_blank" class="btn-whatsapp">Vendas 2</a>
                         <a href="https://wa.me/5567991984853" target="_blank" class="btn-whatsapp">Financeiro</a>
-                        <div class="landline">Tel: (67) 3423-7196</div>
+                        <a href="tel:+556734237196" class="btn-whatsapp" style="background: var(--primary);">Fixo</a>
+                    </div>
+                </div>
+                <div class="info-card location-card reveal">
+                    <div class="icon">📍</div>
+                    <h3>Localização</h3>
+                    <p>R. Toshinobu Katayama, 443 - B<br>Centro, Dourados - MS, 79806-030</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.2673322622744!2d-54.8055627!3d-22.2215286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94896d11f67f0b5d%3A0x64661858e6d2466b!2sR.%20Toshinobu%20Katayama%2C%20443%20-%20Centro%2C%20Dourados%20-%20MS%2C%2079806-030%2C%20Brazil!5e0!3m2!1sen!2sus!4v1712619840000!5m2!1sen!2sus" width="100%" height="300" style="border:0; border-radius: 12px; margin-top: 15px;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -216,11 +273,45 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand">
+                    <div class="footer-logo">
+                        <img src="assets/logo-premium.png" alt="Dental Aliança Logo">
+                    </div>
+                    <p class="footer-desc">A Dental Aliança foca objetivamente em atender com excelência e qualidade, visando a satisfação total de nossos clientes. Referência em produtos odontológicos em Dourados e região.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#marcas">Marcas</a></li>
+                        <li><a href="#categorias">Produtos</a></li>
+                        <li><a href="#sobre">Quem Somos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><a href="#contato">Fale Conosco</a></li>
+                        <li><a href="#contato">Localização</a></li>
+                        <li><a href="#contato">Horários</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Acompanhe-nos</h4>
+                    <div class="footer-social-icons">
+                        <a href="https://www.instagram.com/dentalaliancams/" target="_blank" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.848 0-3.204.013-3.583.07-4.849.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/dentalaliancams/#" target="_blank" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Dental Aliança. Todos os direitos reservados.</p>
-                <div class="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
+                <div class="footer-copy">
+                    &copy; 2026 Dental Aliança. Todos os direitos reservados.
                 </div>
             </div>
         </div>

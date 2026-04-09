@@ -4,12 +4,49 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Intelligent Device Perception
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const isMobile = window.innerWidth <= 768;
+    // 1. Intelligent Device & Platform Perception
+    const body = document.body;
     
-    if (isTouchDevice) {
-        document.body.classList.add('touch-device');
+    const updatePlatformState = () => {
+        const width = window.innerWidth;
+        body.classList.remove('is-mobile', 'is-tablet', 'is-desktop');
+        
+        if (width <= 768) {
+            body.classList.add('is-mobile');
+        } else if (width <= 1024) {
+            body.classList.add('is-tablet');
+        } else {
+            body.classList.add('is-desktop');
+        }
+        
+        console.log(`Platform Context Updated: ${width}px | Mobile: ${body.classList.contains('is-mobile')}`);
+    };
+
+    window.addEventListener('resize', updatePlatformState);
+    updatePlatformState();
+
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (isTouchDevice) body.classList.add('touch-device');
+
+    // 2. Mobile Menu Management
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('.nav-links');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+
+        // Close menu on link click
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
     }
 
     // 2. Preloader Lifecycle Management
@@ -32,7 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Once revealed, no need to observe anymore
+                
+                // Stagger children for premium flow
+                const staggers = entry.target.querySelectorAll('.stagger-item');
+                staggers.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('active');
+                    }, index * 100);
+                });
+                
                 revealObserver.unobserve(entry.target);
             }
         });
@@ -97,5 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Intelligent WhatsApp Link Adjustment
     // If on mobile, ensure direct app opening, on desktop use web.whatsapp if needed
     // (Note: wa.me already handles this gracefully, but we could add logging/trackers here)
+    // 7. Subtle Parallax for Hero
+    const heroImage = document.querySelector('.hero-image');
+    window.addEventListener('scroll', () => {
+        const scroll = window.pageYOffset;
+        if (heroImage && !isTouchDevice && window.innerWidth > 900) {
+            heroImage.style.transform = `translateY(${scroll * 0.12}px)`;
+        }
+    }, { passive: true });
+
     console.log(`Dental Alianca Engine Active | Device: ${isMobile ? 'Mobile' : 'Desktop'} | Touch: ${isTouchDevice}`);
 });
