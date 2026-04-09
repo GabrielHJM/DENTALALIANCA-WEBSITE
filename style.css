@@ -470,18 +470,22 @@ header {
     background: #25d366;
     color: var(--white);
     text-decoration: none;
-    padding: 14px;
-    border-radius: 14px;
+    padding: 12px 24px;
+    border-radius: 18px;
     text-align: center;
     font-weight: 600;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     margin-bottom: 10px;
     transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.15);
 }
 
 .btn-whatsapp:hover { 
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+    transform: translateY(-3px) scale(1.02); 
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25);
 }
 
 .landline {
@@ -760,20 +764,38 @@ header {
     }
 }
 
-/* --- Floating Button --- */
+/* --- Floating Button & Animation --- */
+@keyframes whatsappPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
     right: 30px;
     background: #25d366;
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
     z-index: 999;
+    transition: var(--transition);
+    animation: whatsappPulse 3s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: #20ba5a;
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
 }
 
 /* --- Footer (Foundation Redesign) --- */
